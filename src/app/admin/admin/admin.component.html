@@ -1,41 +1,37 @@
 <div class="container-fluid">
   <mat-toolbar>
     <div class="container">
-      <span>Avengers World</span>
+      <span>Marujeo's World</span>
     
       <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
           <mat-icon>more_vert</mat-icon>
       </button>
         <mat-menu #menu="matMenu">
-          <button (click)="navigate('login')" #loginButton mat-menu-item>
+          <button (click)="navigate('dashboard')" #loginButton mat-menu-item>
+            <mat-icon>home</mat-icon>
+            <span>Home</span>
+          </button>
+          <button (click)="navigate('login')" #loginButton mat-menu-item disabled="{{isLogged?'true':'false'}}">
             <mat-icon>login</mat-icon>
             <span>Log In</span>
           </button>
-          <button (click)="navigate('logout')" mat-menu-item>
+          <button (click)="navigate('logout')" mat-menu-item disabled="{{isLogged?'false':'true'}}">
               <mat-icon>logout</mat-icon>
               <span>Log Out</span>
           </button>
-          <button (click)="navigate('register')" mat-menu-item>
+          <button (click)="navigate('register')" mat-menu-item disabled="{{isLogged?'true':'false'}}">
             <mat-icon>app_registration</mat-icon>
-            <span>Sign Up</span>
+            <span>Register</span>
           </button>
-          <button (click)="navigate('characters')" mat-menu-item>
-            <mat-icon>portrait</mat-icon>
+          <button (click)="navigate('characters')" mat-menu-item disabled="{{isLogged?'false':'true'}}">
+            <mat-icon>portrait</mat-icon> 
             <span>Characters</span>
           </button>
         </mat-menu>
     </div>
   
-
-    <!-- <span class="example-spacer"></span>
-    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-      <mat-icon>favorite</mat-icon>
-    </button>
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-      <mat-icon>share</mat-icon>
-    </button> -->
   </mat-toolbar> 
-  <div class="container pt-1 content-components">
+    <div class="container pt-1 content-components">
     
     <router-outlet></router-outlet>
   </div>

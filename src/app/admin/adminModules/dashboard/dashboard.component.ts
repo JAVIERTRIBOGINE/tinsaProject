@@ -3,23 +3,24 @@ import { Router } from '@angular/router';
 import { AuthorizationService } from 'src/app/core/services/authorization.service';
 
 @Component({
-  selector: 'app-logout',
-  templateUrl: './logout.component.html',
-  styleUrls: ['./logout.component.scss']
+  selector: 'app-dashboard',
+  templateUrl: './dashboard.component.html',
+  styleUrls: ['./dashboard.component.scss']
 })
-export class LogoutComponent implements OnInit {
+export class DashboardComponent implements OnInit {
 
   constructor(private router: Router, private authService: AuthorizationService) { }
 
   ngOnInit() {
-    this.authService.logged = false;
-    sessionStorage.removeItem('currentUser');
   }
 
   navigate(route){
     this.router.navigate([`/admin/${route}`]);
+    
   }
-  
-  
+
+  get isLogged() {
+    return this.authService.isLogged()
+  }
 
 }

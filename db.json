@@ -1,5 +1,16 @@
 {
   "users": [
-
+    {
+      "email": "test1@test.com",
+      "password": "$2a$10$Ao3.vA/guOcnQq45RFQit.AvGySMjz.LDHxfqew6bXp8WVeXWm2NS",
+      "creationDate": "2021-03-21T11:00:26.977Z",
+      "id": 1
+    },
+    {
+      "email": "test@test.com",
+      "password": "$2a$10$aaT7nmEgExGCVaDtzeB58.CABPy/B.DKIvhUfw3.ok42tDQsftRN2",
+      "creationDate": "2021-03-21T11:13:25.365Z",
+      "id": 2
+    }
   ]
 }
