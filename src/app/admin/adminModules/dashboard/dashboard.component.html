@@ -1,0 +1,57 @@
+<div class="row dash-marujeo">
+   <div class="col-sm-12">
+     <div class="container">
+      <mat-card>
+        <mat-card-title>¡HOLA!</mat-card-title>
+        <mat-card-content><h3>Bienvenidos al portal <strong>Marujeo</strong></h3></mat-card-content> 
+      </mat-card>
+     </div>
+   </div>
+   <div class="col-lg-12 col-sm-12">
+     <div class="container">
+        <mat-card>
+          <mat-card-title>Accede</mat-card-title>
+          <mat-card-content>Introduce tus credenciales para acceder a nuestros datos</mat-card-content>
+          <mat-card-actions>
+            <button mat-button color="primary" (click)="navigate('login')">
+              Acceder
+              <mat-icon>login</mat-icon>
+            </button> </mat-card-actions>
+        </mat-card>
+        </div>
+          
+      </div>
+      <div class="col-lg-12 col-sm-12">
+        
+     <div  class="container">
+      <ng-container *ngIf="!isLogged; else logOut">
+        <mat-card>
+          <mat-card-title>Regístrate</mat-card-title>
+          <mat-card-content>Si no tienes cuenta, créate una cuenta</mat-card-content>
+          <mat-card-actions>
+            <button mat-button color="primary" (click)="navigate('register')">
+                  Regístrate
+                  <mat-icon>login</mat-icon>
+            </button>
+          </mat-card-actions>
+        </mat-card>        
+      </ng-container>
+      <ng-template #logOut>
+        <mat-card>
+          <mat-card-title>Cierra sesión</mat-card-title>
+          <mat-card-content>
+            Regístrate o logeate con otra cuenta
+          </mat-card-content>
+            <mat-card-actions>
+              <button mat-button color="primary" (click)="navigate('logout')">
+                  Log Out
+                  <mat-icon>login</mat-icon>
+              </button> 
+            </mat-card-actions>
+        </mat-card>        
+      </ng-template>
+        
+    </div>
+
+  </div>
+</div>

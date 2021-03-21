@@ -1,0 +1,19 @@
+// .dash-marujeo-container {
+//     position: relative;
+//     float: left;
+//     // overflow: hidden;
+//     height: 800px;
+//     width: 1500px;
+// }
+.dash-marujeo {
+    background-image: url('../../../../assets/img/marujeo.jpeg');
+    // background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    div {
+        margin: auto;
+    }
+}
